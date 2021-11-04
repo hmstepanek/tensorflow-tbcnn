@@ -271,8 +271,8 @@ def do_train():
     # restorer for embedding matrix
     restorer = tf.train.Saver({'embedding/We': param.get('We')})
     embedding_path = tf.train.latest_checkpoint(hyper.embedding_dir)
-    if embedding_path is None:
-        raise ValueError('Path to embedding checkpoint is incorrect: ' + hyper.embedding_dir)
+    # if embedding_path is None:
+    #    raise ValueError('Path to embedding checkpoint is incorrect: ' + hyper.embedding_dir)
 
     # train loop
     saver = tf.train.Saver()
@@ -280,10 +280,10 @@ def do_train():
     val_set = compiler.build_loom_inputs(ds.get_split('val')[1])
     with tf.Session() as sess:
         # Restore embedding matrix first
-        restorer.restore(sess, embedding_path)
+        # restorer.restore(sess, embedding_path)
         # Initialize other variables
         gvariables = tf.global_variables()
-        gvariables.remove(param.get('We'))  # exclude We
+        # gvariables.remove(param.get('We'))  # exclude We
         sess.run(tf.variables_initializer(gvariables))
 
         summary_writer = tf.summary.FileWriter(hyper.log_dir, graph=sess.graph)
