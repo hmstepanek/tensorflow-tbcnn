@@ -1,0 +1,13 @@
+version: '3'
+services:
+  web:
+    image: hmstepanek/sqlinjection-tbcnn:1.0.1
+    command: python -m tbcnn.tbcnn
+    deploy:
+      resources:
+        limits:
+          cpus: '16'
+          memory: 10G
+        reservations:
+          devices:
+            - capabilities: [gpu]

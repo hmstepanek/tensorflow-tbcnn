@@ -1,0 +1,9 @@
+
+    deploy:
+      resources:
+        limits:
+          cpus: '8'
+          memory: 10G
+        reservations:
+          devices:
+            - capabilities: [gpu]

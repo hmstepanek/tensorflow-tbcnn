@@ -1,5 +1,5 @@
 ### BUILD
-FROM      tensorflow/tensorflow:latest
+FROM      tensorflow/tensorflow:2.6.0
 
 WORKDIR   /var/app
 #RUN mkdir -p /var/app/requirements
