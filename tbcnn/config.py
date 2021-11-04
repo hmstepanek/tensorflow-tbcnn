@@ -62,7 +62,7 @@ class hyper(object):
             parser.add_argument('--batch_size', help='batch size', type=int, default=128)
             parser.add_argument('--learning_rate', help='learning rate', type=float, default=0.0002)
             parser.add_argument('--weight_decay', help='weight decay factor', type=float, default=0.0002)
-            parser.add_argument('--word_dim', help='dimension of node feature', type=int, default=100)
+            parser.add_argument('--word_dim', help='dimension of node feature', type=int, default=120)
             parser.add_argument('--conv_dim',
                                 help='dimension of conv feature detectors', type=int, default=50)
             parser.add_argument('--fc_dim',
