@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    image: hmstepanek/sqlinjection-tbcnn:1.0.1
+    image: hmstepanek/sqlinjection-tbcnn:1.0.2
     command: python -m tbcnn.tbcnn
     deploy:
       resources:
